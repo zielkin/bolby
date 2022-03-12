@@ -1,0 +1,50 @@
+body {
+	background-color: $bodyBgColor;
+	font-family: $mainFontColor;
+	overflow-x: hidden;
+}
+
+@media (max-width: $showResponsiveNavigation) {
+	.menu-open {
+		main {
+			margin: 0 0 0 290px;
+		}
+	}
+}
+
+main {
+	transition: 500ms;
+	padding: 0 0 0 290px;
+	@media (max-width: $showResponsiveNavigation) {
+		padding: 0;
+	}
+}
+
+a {
+	text-decoration: none;
+	transition: 300ms;
+}
+
+.container {
+	max-width: 1170px;
+	padding: 0 15px 0 15px;
+	margin: 0 auto;
+}
+
+.globalHeader {
+	@include fluid-type-container(26px, 36px);
+	color: $mainHeaderColor;
+	margin: 0 0 60px 0;
+	position: relative;
+
+	&::after {
+		content: '';
+		height: 37px;
+		width: 37px;
+		display: block;
+		background-image: url('../img/dots-bg.svg');
+		position: absolute;
+		top: -12px;
+		left: -12px;
+	}
+}
